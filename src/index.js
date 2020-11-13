@@ -81,7 +81,7 @@ async function get_gif(search_term)
 
     if(giphy_json.data.length > 0)
     {   
-        const rand = Math.floor(Math.random()*(Math.max(giphy_json.data.length, 10)));
+        const rand = Math.floor(Math.random()*(Math.min(giphy_json.data.length, 10)));
         const img_url = giphy_json.data[rand].images.fixed_height.url;
         return img_url;
     }
